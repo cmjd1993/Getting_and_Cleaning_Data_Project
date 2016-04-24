@@ -25,7 +25,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ##My run_analysis.R Script##
 
-My run_analysis.R script does teh following: 
+My run_analysis.R script does the following: 
 
 * Merges the training and the test sets to create one data set.
 * Extracts only the measurements on the mean and standard deviation for each measurement.
