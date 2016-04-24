@@ -65,7 +65,7 @@ tBodyGyroJerkMean
 
 ##My Submission##
 
-the orginal zip file contains the following:
+the original zip file contains the following:
 
 * 'features_info.txt': Shows information about the variables used on the feature vector.
 
