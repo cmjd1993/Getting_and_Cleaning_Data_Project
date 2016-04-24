@@ -11,7 +11,7 @@ The objective of this project was to submit a tidy dataset. The review criteria 
 5. The work submitted for this project is the work of the student who submitted it
 
 ##The Repos##
-This Repos comntains the following:
+This Repos contains the following:
 * Tidy_Data - This is my tidy dataset 
 * Codebook.md - A markdown file with 
 * README.md - This file
