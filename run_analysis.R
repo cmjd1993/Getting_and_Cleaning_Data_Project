@@ -1,11 +1,11 @@
-## load the plyr package as we will need this for the assignment 
+## Load the plyr package as we will need this for the assignment 
 library(plyr)
 
-## create a path to load the datasets from the zip file.
+## Create a path to load the datasets from the zip file.
 
 path <- "~/Desktop/Cathy Coursera/UCI HAR Dataset/"
 
-## load all the various data sources into R. Put them all into the same format
+## Load all the various data sources into R. Put them all into the same format
 ## using read.table function.
 
 features <- read.table(paste0(path,"features.txt"),
@@ -33,7 +33,7 @@ activity_labels <- read.table(paste0(path,"activity_labels.txt"),
                      quote="\"", comment.char="", stringsAsFactors=FALSE)
 
 
-## using the rbind() command, group all the "x", "y" and "subject" data together
+## Using the rbind() command, group all the "x", "y" and "subject" data together
 ## to save messing around with 6 different data tables.
 
 x_data <- rbind(x_train, x_test)
@@ -41,7 +41,7 @@ y_data <- rbind(y_train, y_test)
 subject_data <- rbind(subject_train, subject_test)
 
 
-## using the features table, select all variables for the mean and standard 
+## Using the features table, select all variables for the mean and standard 
 ## deviation using Metacharacters and the grep() command. We then apply names
 ## to x_data
 
@@ -50,22 +50,22 @@ x_data <- x_data[,features_wanted]
 names(x_data) <- features[features_wanted, 2]
 
 
-## change the activity values to names from the activity_labels data and rename 
+## Change the activity values to names from the activity_labels data and rename 
 ## column "Activity" for y_data.
 
 y_data[, 1] <- activity_labels[y_data[, 1], 2]
 names(y_data) <- "Activity"
 
 
-## reanme the subject_data to "Subject" for clarity
+## Reanme the subject_data to "Subject" for clarity
 
 names(subject_data) <- "Subject"
 
-## using cbind(), bind all the data together into one dataset called "tidy_data"
+## Using cbind(), bind all the data together into one dataset called "tidy_data"
 
 tidy_data <- cbind(subject_data, y_data, x_data)
 
-## tidy up column names using "for" loop to make names appear neater.
+## Tidy up column names using "for" loop to make names appear neater.
 
 tidy_names  = colnames(tidy_data);
 
@@ -79,7 +79,7 @@ for (i in 1:length(tidy_names))
 
 colnames(tidy_data) = tidy_names
 
-## create independent tidy data set with average of each variable for each 
+## Create independent tidy data set with average of each variable for each 
 ## activiy and subject
 
 mean_tidy_data <-aggregate(. ~Subject + Activity, tidy_data, mean)
