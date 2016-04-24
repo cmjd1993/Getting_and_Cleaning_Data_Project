@@ -12,10 +12,10 @@ The objective of this project was to submit a tidy dataset. The review criteria 
 
 ##The Repos##
 This Repos contains the following:
-* Tidy_Data - This is my tidy dataset 
-* Codebook.md - A markdown file with 
-* README.md - This file
-* run_analysis.R  - My r script instruction how I transformed the data from raw data into a tidy dataset
+* *tidy_data* - This is my tidy dataset 
+* *Codebook.md* - A markdown file with details on the Dataset, variables in the dataset and the procedures that I took to tidying the data in *run_analysis.R* to create *tidy_data.txt*
+* *README.md* - This file
+* *run_analysis.R*  - My r script instruction how I transformed the data from raw data into a tidy dataset called *tidy_data.txt*
 
 ##The Data##
 
