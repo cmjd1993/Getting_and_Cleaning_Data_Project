@@ -74,6 +74,8 @@ for (i in 1:length(tidy_names))
         tidy_names[i] = gsub("-mean","Mean",tidy_names[i])
         tidy_names[i] = gsub("-std","Std",tidy_names[i])
         tidy_names[i] = gsub("\\()","",tidy_names[i])
+        tidy_names[i] = gsub("^t","time",tidy_names[i])
+        tidy_names[i] = gsub("^f","freq",tidy_names[i])
         
 }
 
